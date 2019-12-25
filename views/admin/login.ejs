@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="admin_sign_in_form"> 
+        <img src="../admin/assets/download.png" alt="admin_logo">  
+        <h1 style="font-weight: bold ; color: #660000"> Admin Login </h1>
+          <% if (success.length > 0) { %>
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <%= success %>
+            </div>
+          <% } %>
+          <% if (error.length > 0) { %>
+            <div class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <%= error %>
+            </div>
+          <% } %>
+        <hr color="#660000">
+            <form action="/admin/login" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" required="true" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" required="true" class="form-control" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="loginBtn" class="form-control btn btn-primary btn-sm">Login</button>
+                </div>
+            </form>
+            <p><a class="badge badge-dark" href="/users/login">For user login! please click here</a></p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

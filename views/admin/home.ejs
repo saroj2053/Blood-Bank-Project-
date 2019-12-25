@@ -1,0 +1,54 @@
+<% include layout/header %>
+
+<div style="margin-top: 24px;"></div>
+<div class="container form_alignment">
+    <h3 style="color: #660000; text-align: center;">Add Employee</h3>
+    <hr color="#660000">
+    <% if (success.length > 0) { %>
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= success %>
+        </div>
+      <% } %>
+    <form method="post" action="/admin/home">
+        <div class="form-group">
+            <label for="firstName">Firstname:</label>
+            <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name" required="true">
+        </div>
+        <div class="form-group">
+            <label for="middleName">Middlename:</label>
+            <input type="text" name="middleName" id="middleName" class="form-control" placeholder="Middle Name">
+        </div>
+        <div class="form-group">
+            <label for="middleName">Lastname:</label>
+            <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last Name" required="true">
+        </div>
+        <div class="form-group">
+            <label>Username:</label>
+            <input type="text" name="username" class="form-control" required="true">
+        </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="password" name="password" class="form-control" required="true">
+        </div>
+        <!-- <div class="form-group">
+            <label>Date of Birth:</label>
+            <input type="text" id="dob" name="dob" class="form-control" required="true" onblur = "ValidateDOB()" placeholder="Enter date in dd/MM/yyyy format ONLY.">
+            <span class="error" id="lblError"></span>
+
+        </div> -->
+        <div class="form-group">
+            <label for="designation">Designation:</label>
+            <input type="text" name="designation" id="designation" class="form-control" required="true">
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile:</label>
+            <input type="number" min="0" max="10000000000" name="mobile" id="mobile" class="form-control" required="true">
+        </div>
+        <div class="form-group">
+            <button type="submit" style="background-color: #660000; color: #fff;" class=" form-control btn btn-md" name="submit" onclick="return ValidateDOB()">Add Employee</button>
+        </div>
+    </form>
+</div>
+
+<% include layout/footer %>

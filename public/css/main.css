@@ -1,0 +1,120 @@
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 3px;
+    background-color: #660000;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.container {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: #FFF;
+}
+.navbar-nav li a {
+    color:#fff !important;
+}
+.navbar-nav li a:hover {
+    color: #ffffff !important;
+    background: #000;
+    font-weight: bold;
+}
+
+
+/* form alignment */
+
+.form_alignment {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+/* Admin sign in form */
+
+.admin_sign_in_form {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.mainContainer {
+    background-image:  linear-gradient(rgba(0,0,0,0.9),rgba(255,255,255,0.2)),url("/assets/bg_image.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 400px;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    }
+
+.header-content {
+    font-size: 55px;
+        position: absolute;
+        top: 40%;
+        left: 45%;
+        transform: translate(-50%,-50%);
+        color: #fff;
+        letter-spacing: 3px;
+        font-family: 'Roboto Condensed', sans-serif;
+}
+.para1 {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.a_links {
+    position: absolute;
+    top: 65%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+}
+
+.btn-lg {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* user-login.ejs */
+
+.text-hover:hover {
+    font-size: 25px;
+    font-family: 'Roboto Condensed', sans-serif; 
+}
+
+/* user-signup */
+.user-signup-container {
+    font-family:'Roboto Condensed', sans-serif;
+}
+
+.main-heading-form {
+    font-style: normal;
+    font-weight: bold;
+    color: #660000;
+}
+
+#about {
+    font-size: 20px;
+}
+
+.footerDesign p {
+    margin: 20px;
+}
+
+.nav-item .nav-link {
+    font-size: 13px;
+}

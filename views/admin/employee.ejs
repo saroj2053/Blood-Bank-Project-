@@ -1,0 +1,36 @@
+<% include layout/header %>
+
+<div class="container">
+    <h1 class="main-heading-form">Employee Info</h1>
+    <hr color="grey">
+    <table class="ui celled table">
+        <thead>
+            <tr>
+            <th>Name</th>
+            <!-- <th>DOB</th> -->
+            <th>Contact Number</th>
+            <th>Designation</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% employees.forEach(function(employee){ %>
+            <tr>
+                <td><%= employee.first_name + " " +employee.last_name %></td>
+                <!-- <td><%= employee.date_of_birth.toLocaleDateString() %></td> -->
+                <td><%= employee.contact_number %></td>
+                <td><%= employee.designation %></td>
+                <td><a href="/employees/<%=employee._id%>/edit"><button><i style="color: orange;"class="edit icon"></i></button></button></a></td>
+                <form id="delete-form" action="/employees/<%=employee._id%>?_method=DELETE" method="POST">
+                    <td><button><i style="color: red;" class="cut icon"></i></button></td>     
+                </form>
+            </tr>
+            <% }); %>
+        </tbody>
+        </table>
+</div>
+
+
+<div style="margin-top: 500px;"></div>
+<% include layout/footer %>

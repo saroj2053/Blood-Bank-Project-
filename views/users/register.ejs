@@ -1,0 +1,73 @@
+<% include ../partials/header %>
+
+<div style="font-family: 'Roboto Condensed', sans-serif;" class="container">
+    <div class="row">
+        <img style="width:50%;height:80%;z-index:-1;" src="../user/assets/donate_blood.jpg">
+        <div style="width: 50%; margin:25px auto;">
+            <img src="../user/assets/register.jpg">
+            <p>Join our community and reach out your hands for the others in need. Just by registering below you will make an agreement with us that you are ready to donate and will be available whenever we will need you.</p>
+            <% if (success.length > 0) { %>
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <%= success %>
+                </div>
+              <% } %>
+            <form action="/users/register" method="post">
+                <div class="form-group">
+                    <label for="firstName">Firstname</label>
+                    <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name" required="true">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Lastname</label>
+                    <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last Name" required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" required="true" id="email" class="form-control" name="email" >
+                </div>
+                <div class="form-group">
+                    <label for="dob">D.O.B</label>
+                    <input type="text" required="true" id="dob" class="form-control" name="dob" onblur = "ValidateDOB()" placeholder="Enter date in dd/MM/yyyy format ONLY.">
+                    <span style="color: red; font-style: italic; font-weight: bold;" class="error" id="lblError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <input type="radio" value="Male" checked="true" class="radio-inline" name="gender" >Male
+                    <input type="radio" value="Female" class="radio-inline" name="gender" >Female
+                </div>
+                <div class="form-group">
+                    <label for="blood_group">Blood Group</label>
+                    <select name="blood_group" class="form-control">
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea required="true" minlength="5" id="address" class="form-control" name="address" rows="3" placeholder="Please fill out your complete address."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" required="true" id="city" class="form-control" name="city" >
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" required="true" id="mobile" class="form-control" name="mobile" maxlength="10" >
+                </div>
+                <div class="form-group">
+                    <button class=" form-control btn btn-success" name="submitBtn" onclick="return ValidateDOB()" >Join</button>
+                </div>
+            </form>
+        </div>
+    </div> 
+</div>
+
+
+
+<% include ../partials/footer %>
